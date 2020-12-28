@@ -18,24 +18,25 @@ tags:
 
 > This is part of Academy's [technical curriculum for **The Mark**](https://github.com/WeAreAcademy/curriculum-mark). All parts of that curriculum, including this project, are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
 
-You have learned how to build a **Command Line Interface** (CLI) game in Python. This means that you can also learn how to build a CLI in **JavaScript**!
+You have learned how to read, extend and write code for a **JavaScript CLI game**. This means that you can also learn how to build a CLI in ***Type*Script**!
 
-In this challenge, you will work out how an existing CLI game in JavaScript works, using the same ideas which you've been applying in Python: _variables_, _control flow_ and _functions_.
+In this challenge, you will work out how an existing CLI game in TypeScript works, using the same ideas which you've been applying in Python and JavaScript: _variables_, _control flow_ and _functions_.
 
-As an extension, you will then try to extend the game by adding in some further behaviour.
+There are a couple of additional things that TypeScript adds to JavaScript (e.g. `interface`s and `type`s).
 
 ## Learning Outcomes
 
 - Interpret code written by others
-- Use variable declaration and assignment in JavaScript
-- Use control flow in JavaScript
-- Use functions and arguments in JavaScript
+- Use variable declaration and assignment in TypeScript
+- Use control flow in TypeScript
+- Use functions and arguments in TypeScript
 - Use search engines as a learning and knowledge aid
 - Add code to a codebase written by others
+- Constrain variables and arguments in TypeScript
 
 ## Exercise 1: Installing and demoing
 
-**Success criterion:** playing a few games of Rock Paper Scissors on your local machine by running the JavaScript programme written.
+**Success criterion:** playing a few games of Rock Paper Scissors on your local machine by running the TypeScript programme written.
 
 Firstly, clone this repository to your local machine in some sensible place, for example:
 
@@ -59,7 +60,7 @@ yarn start
 
 ## Exercise 2: Reading, understanding and documenting
 
-**Success criterion:** a document which outlines how you think this JavaScript programme works. You don't have to achieve a theory which explains 100%, but you should strive to explain as much as possible.
+**Success criterion:** a document which outlines how you think this TypeScript programme works. You don't have to achieve a theory which explains 100%, but you should strive to explain as much as possible.
 
 (N.B.: The _correctness_ of your theory is **much less important** than the _process_ of forming this document. [Forming a prediction, and then discovering it was wrong, is an effective way to learn](https://www.sciencedirect.com/science/article/abs/pii/S0959475217303468)!)
 
@@ -94,7 +95,7 @@ function printGreeting(name) {
 
 ... but you have the freedom to document in whatever way seems helpful or sensible to you.
 
-(Unsure of the syntax for adding comments in JavaScript? Google it!)
+(Unsure of the syntax for adding comments in TypeScript? Google it!)
 
 _(N.B. This documenting exercise is suggested as a learning tool rather than a production codebase best practice.)_
 
