@@ -2,7 +2,16 @@ import { question as prompt } from "readline-sync";
 import randomWords from "random-words";
 
 /**
- * Represents a slot on the board. It stores data on the underlying letter at that position as well as whether or not the letter has been revealed.
+ * Represents a slot on the Hangman game board. It stores data on the underlying letter at that position as well as whether or not the letter has been revealed.
+ *
+ * @example
+ * ```ts
+ * // to represent an un-revealed 'p'
+ * { letter: 'p', isRevealed: false }
+ *
+ * // to represent a revealed 'i'
+ * { letter: 'i', isRevealed: true }
+ * ```
  */
 interface LetterSlot {
   /** The letter in this position */
@@ -11,6 +20,30 @@ interface LetterSlot {
   isRevealed: boolean;
 }
 
+/**
+ * Represents the Hangman game board - an array of LetterSlots.
+ *
+ * @example
+ * ```ts
+ * // to represent 'cat', with only the T revealed:
+ * [
+ *   { letter: 'c', isRevealed: false },
+ *   { letter: 'a', isRevealed: false },
+ *   { letter: 't', isRevealed: true }
+ * ]
+ * ```
+ * @example
+ * ```ts
+ * // to represent 'hello', with 'h' and 'l' revealed:
+ * [
+ *   { letter: 'h', isRevealed: true },
+ *   { letter: 'e', isRevealed: false },
+ *   { letter: 'l', isRevealed: true },
+ *   { letter: 'l', isRevealed: true },
+ *   { letter: 'o', isRevealed: false }
+ * ]
+ * ```
+ */
 type HangmanBoard = LetterSlot[];
 
 /** The word which is hidden and to-be-guessed */
