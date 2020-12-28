@@ -36,19 +36,19 @@ There are a couple of additional things that TypeScript adds to JavaScript (e.g.
 
 ## Exercise 1: Installing and demoing
 
-**Success criterion:** playing a few games of Rock Paper Scissors on your local machine by running the TypeScript programme written.
+**Success criterion:** playing a few games of Hangman on your local machine by running the TypeScript programme written.
 
 Firstly, clone this repository to your local machine in some sensible place, for example:
 
 ```bash
 cd ~/Development/Academy # or wherever you're organising everything
-git clone git@github.com:WeAreAcademy/mark-fundamentals-proj--js-rock-paper-scissors.git
+git clone https://github.com/WeAreAcademy/mark-fundamentals-proj--ts-hangman.git
 ```
 
 Then, change into the new directory and install the files:
 
 ```bash
-cd mark-fundamentals-proj--js-rock-paper-scissors
+cd mark-fundamentals-proj--ts-hangman
 yarn
 ```
 
@@ -64,68 +64,26 @@ yarn start
 
 (N.B.: The _correctness_ of your theory is **much less important** than the _process_ of forming this document. [Forming a prediction, and then discovering it was wrong, is an effective way to learn](https://www.sciencedirect.com/science/article/abs/pii/S0959475217303468)!)
 
-As a _learning exercise_ in reading and thinking about code, here are some steps that we _suggest_ (not as a strict sequential ordering):
+Steps that we have previously suggested as a learning exercise (and suggest again) include:
 
-### a) Take some time to read and digest the code.
+1. Take some time to read and digest the code
+2. Google things that you don't understand
+3. Experiment with changing things
+4. Produce a narrative document
 
-Focus on forming a theory about how the programme is meant to work, through the lens of _ideas_ rather than the _syntax_.
+A good narrative document for this game would walk through at least one game of Hangman and explain how the programme code is leading to the terminal output. (Screenshots of the terminal and/or snippets of programme code are likely to be helpful here.)
 
-You won't understand everything straight away. That's okay! It is a different syntax to Python. However, the _ideas_ are very similar.
+## Exercise 3: TypeScript-specific notes
 
-### b) Add comments for the parts you understand.
+The basic principles of variable assignment, control flow and functions are the same between TypeScript and JavaScript (and also Python).
 
-At this point in time, you're trying to make sense of the code, and hold a lot of things together in your head.
+TypeScript does introduce some additional things, though:
 
-It will help your learning to take some of those things out of your head and put them down in writing, so we suggest that you begin documenting your understanding of the code by adding comments that explain what is happening.
-
-For example, here is how you might try to document your understanding of a line of code within a function:
-
-```js
-function printGreeting(name) {
-  /**
-   * I think console.log is printing
-   *  out the message we pass to it.
-   *  This message comes from joining
-   *  together three parts into a single
-   *  combined message.
-   */
-  console.log("Hi there, " + name + "!");
-}
-```
-
-... but you have the freedom to document in whatever way seems helpful or sensible to you.
-
-(Unsure of the syntax for adding comments in TypeScript? Google it!)
-
-_(N.B. This documenting exercise is suggested as a learning tool rather than a production codebase best practice.)_
-
-### c) Google things you don't understand.
-
-We expect that there are things in the code which you won't immediately fathom (e.g. `Object.values).
-
-Google them and see if you can make sense of them!
-
-### d) Experiment with changing things.
-
-A great way to test your understanding of things is to experiment, change things, and see what breaks.
-
-Things you might try doing:
-
-- You have a theory about a variable - try doing a `console.log` of it to get some _visibility_ on its value
-- You have a theory about the flow of a function - try moving things around inside it and see whether it breaks as you expect
-
-### e) Produce a narrative document.
-
-One way you could do this would be to explain a few different games of Rock Paper Scissors
-
-A good narrative document for this game would walk through a few different games of Rock Paper Scissors and explain how the programme code is leading to the terminal output. (Screenshots of the terminal and/or snippets of programme code are likely to be helpful here.)
-
-Things that you should try to include (amongst other things):
-
-- How is it determined who wins out of the player or the computer?
-- What is the apparent role or purpose of the 'variants'?
-- What does `Math.floor(Math.random() * 3)` do and how does it help?
-- Why is there a `while` loop in `getUserChoice()`?
+| Item | Idiomatic JavaScript example | Idiomatic TypeScript example |
+| --- | --- | --- |
+| Variable declaration | `let livesRemaining = 10` | `let livesRemaining: number = 10` |
+| Function declaration | <pre>function takeAndHandleGuess() { <br /> &nbsp;... <br /> }</pre> | <pre>function takeAndHandleGuess(): void { <br /> &nbsp;... <br />}</pre> |
+| Parameter declaration | <pre>function wordToBoard(word) { <br /> &nbsp;... <br /> }</pre> | <pre>function wordToBoard(word: string): Board { <br /> &nbsp;... <br />}</pre> |
 
 ## Exercise 4: Check your understanding
 
