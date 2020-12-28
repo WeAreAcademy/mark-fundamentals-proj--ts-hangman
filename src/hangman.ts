@@ -97,6 +97,7 @@ function boardContainsLetter(letterToCheck: LowercaseLetter): boolean {
 }
 
 /**
+ * Formats the board for printing to the console
  * @returns a formatted string that represents the board for printing to the console
  */
 function boardForPrint(): string {
