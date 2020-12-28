@@ -95,51 +95,34 @@ Produce a document which explains:
 - How do each of these things work?
 - How are they used in the Hangman project?
 
+If you are a bit baffled by TypeScript, you might want to [try this 1 hour course](https://scrimba.com/learn/intrototypescript).
+
 ## Exercise 4: Check your understanding
 
-**Success criterion:** a conversation with a Faculty member and amended comments.
+> 🎯 **Success criterion:** a conversation with a Faculty member and amended comments.
 
-Talk to a member of Faculty about your understanding of the game.
+Talk to a member of Faculty about your understanding of the game and of TypeScript.
 
-Amend the comments on your copy of the code for any important points that come out of the conversation.
+Amend your notes for any important points that come out of the conversation.
 
 ## Exercise 5: Extend the game
 
 > 🎯 **Success criterion:** a game which can be playtested and which satisfies the specified requirements for each extension.
 
-### Extension 1: Rock Paper Scissors Lizard Spock
+### Extension 1: Handle uppercase guesses
 
-Rock Paper Scissors often ends in draws - something which some people think is a feature, and others think is a bug!
+The game probably doesn't behave as a player would expect when they guess a letter in uppercase form.
 
-Let's assume that reducing the likelihood of draws is desirable, and extend the game to [_Rock Paper Scissors Lizard Spock_](http://www.samkass.com/theories/RPSSL.html).
+Produce some acceptance criteria for a fix, and then try to implement a fix to pass those acceptance criteria.
 
-(How to play? Check out [Sheldon Cooper's explanation](https://www.youtube.com/watch?v=Kov2G0GouBw).)
+(Acceptance criteria are really helpful here because there are at least two fundamentally different ways you could handle the user inputting an uppercase letter: require them to try again with a lowercase letter, or process the uppercase letter in a sensible way.)
 
-**Requirements**
+### Extension 2: Hangman animation
 
-1. The computer should randomly choose one of the five options
-2. All five options (and tolerable variants) should be allowed as input from the user
-3. The programme should correctly report back the result of a match
+The game currently prints out a slightly boring 'Lives remaining' message.
 
-### Extension 2: replay in a case of draw
-
-When you get a draw in RPS(cLSp), you often immediately replay the game.
-
-Currently, our programme doesn't do that!
-
-**Requirements**
-
-Add a feature where:
-
-1. If you draw, you are asked to play again (until there is an eventual winner)
-2. When there is a winner, the programme ends
+Can you extend the game so that an [ASCII stick person](https://www.google.com/search?q=ascii+stick+person&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjMy62_nfHtAhVAQhUIHV4qD1QQ_AUoAXoECBAQAw&biw=1536&bih=801) gets slowly assembled, like in the traditional whiteboard version of the game?
 
 ## Exercise 6: Commentary and reflection
 
 **Success criterion:** documented reflections.
-
-1. What are the main similarities and differences you can see between Python and JavaScript?
-2. How easy or difficult was it to understand the code?
-   1. What was easiest to understand? In what way?
-   2. What was hardest to understand? In what way?
-3. How easy or difficult was it to _add to_ the code?
