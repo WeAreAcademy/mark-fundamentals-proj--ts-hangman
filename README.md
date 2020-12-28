@@ -80,11 +80,12 @@ The basic principles of variable assignment, control flow and functions are the 
 TypeScript does introduce some additional things, though:
 
 | Item | JavaScript example | TypeScript example |
-| --- | --- | --- |
+| --- | --- | --- | --- | --- | --- |
 | Variable declaration | `let counter = 10` | `let counter: number = 10` |
 | Function declaration | <pre>function printCounterValue() { <br /> &nbsp;console.log(counter) <br /> }</pre> | <pre>function printCounterValue(): void { <br /> &nbsp;console.log(counter) <br />}</pre> |
 | Parameter declaration | <pre>function incrementCounter(n) { <br /> &nbsp;counter += n; <br /> &nbsp;return counter; <br /> }</pre> | <pre>function incrementCounter(n: number): number { <br /> &nbsp;counter += n; <br /> &nbsp;return counter; <br /> }</pre> |
-| Interfaces | N/A |
+| Interfaces | N/A | <pre>interface FootballMatch { <br/>&nbsp;homeGoals: number; <br/>&nbsp;awayGoals: number; <br/>&nbsp;teamNames: string[], <br/>&nbsp;isFullTime: boolean }</pre> |
+| Types | N/A | <pre>type FootballPosition = 'striker' | 'midfielder' | 'defender' | 'goalkeeper'</pre> |
 
 ## Exercise 4: Check your understanding
 
