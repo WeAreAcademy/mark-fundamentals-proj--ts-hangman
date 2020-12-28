@@ -133,6 +133,14 @@ function handleGuess(guess: string): void {
   }
 }
 
+/**
+ * A type guard that checks whether or not a given string is of the `LowercaseLetter` type.
+ *
+ * To learn more about type guards in TypeScript, see these readings on user-defined type guards: [Official TypeScript handbook](https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards) | [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/type-system/typeguard#user-defined-type-guards)
+ *
+ * @param str the string to check
+ * @returns a boolean indicating whether or not the string is a `LowercaseLetter`
+ */
 function isALowercaseLetter(str: string): str is LowercaseLetter {
   return str.length === 1 && !!str.match(/[a-z]/);
 }
