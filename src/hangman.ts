@@ -2,6 +2,37 @@ import { question as prompt } from "readline-sync";
 import randomWords from "random-words";
 
 /**
+ * A single character that is a lowercase letter of the Latin alphabet
+ */
+type LowercaseLetter =
+  | "a"
+  | "b"
+  | "c"
+  | "d"
+  | "e"
+  | "f"
+  | "g"
+  | "h"
+  | "i"
+  | "j"
+  | "k"
+  | "l"
+  | "m"
+  | "n"
+  | "o"
+  | "p"
+  | "q"
+  | "r"
+  | "s"
+  | "t"
+  | "u"
+  | "v"
+  | "w"
+  | "x"
+  | "y"
+  | "z";
+
+/**
  * Represents a slot on the Hangman game board. It stores data on the underlying letter at that position as well as whether or not the letter has been revealed.
  *
  * @example
@@ -15,7 +46,7 @@ import randomWords from "random-words";
  */
 interface LetterSlot {
   /** The letter in this position */
-  letter: string;
+  letter: LowercaseLetter;
   /** Whether or not the letter has been revealed */
   isRevealed: boolean;
 }
@@ -61,7 +92,7 @@ let guessesMade: string[] = [];
  * @param letterToCheck The letter to check against the board
  * @returns a boolean for whether or not the letter is present
  */
-function boardContainsLetter(letterToCheck: string): boolean {
+function boardContainsLetter(letterToCheck: LowercaseLetter): boolean {
   return board.some((letterSlot) => letterSlot.letter === letterToCheck);
 }
 
@@ -94,7 +125,7 @@ function gameIsOngoing(): boolean {
  */
 function handleGuess(guess: string): void {
   storeGuess(guess);
-  if (guess.length === 1) {
+  if (isALowercaseLetter(guess)) {
     processGuessedLetter(guess);
   } else {
     /** Assume that every guess that isn't a letter is a word guess. */
@@ -102,11 +133,15 @@ function handleGuess(guess: string): void {
   }
 }
 
+function isALowercaseLetter(str: string): str is LowercaseLetter {
+  return str.length === 1 && !!str.match(/[a-z]/);
+}
+
 /**
  * Process a letter guessed by the player
  * @param letter the letter guessed by the player
  */
-function processGuessedLetter(letter: string): void {
+function processGuessedLetter(letter: LowercaseLetter): void {
   if (boardContainsLetter(letter)) {
     /** Reveal the letter on the board if it's present */
     console.log("Bullseye!");
@@ -139,7 +174,7 @@ function processGuessedWord(word: string): void {
  * @param letterSlot the underlying letter slot data
  * @returns a character representing the letter slot, either the letter itself (if the letterSlot is revealed) or an `_` to represent a blank
  */
-function letterSlotForPrint(letterSlot: LetterSlot): string {
+function letterSlotForPrint(letterSlot: LetterSlot): LowercaseLetter | "_" {
   if (letterSlot.isRevealed) {
     return letterSlot.letter;
   } else {
@@ -200,7 +235,7 @@ function revealWholeBoard(): void {
  * Reveals all letters on the board which match the target letter. (There might be multiple!)
  * @param letterToReveal the letter to reveal on the board
  */
-function revealLetter(letterToReveal: string): void {
+function revealLetter(letterToReveal: LowercaseLetter): void {
   /** To account for multiple of the target letter being present, iterate through every slot on the board */
   for (const letterSlot of board) {
     if (letterSlot.letter === letterToReveal) {
@@ -242,7 +277,7 @@ function takeAndHandleGuess(): void {
  * @returns a `HangmanBoard` representation of the word (with all letters hidden at the start)
  */
 function wordToBoard(word: string): HangmanBoard {
-  const lettersArr = word.split("");
+  const lettersArr = word.split("") as LowercaseLetter[];
   return lettersArr.map((char) => ({ letter: char, isRevealed: false }));
 }
 
