@@ -60,7 +60,7 @@ yarn start
 
 ## Exercise 2: Reading, understanding and documenting
 
-**Success criterion:** a document which outlines how you think this TypeScript programme works. You don't have to achieve a theory which explains 100%, but you should strive to explain as much as possible.
+> 🎯 **Success criterion:** a document which outlines how you think this TypeScript programme works. You don't have to achieve a theory which explains 100%, but you should strive to explain as much as possible.
 
 (N.B.: The _correctness_ of your theory is **much less important** than the _process_ of forming this document. [Forming a prediction, and then discovering it was wrong, is an effective way to learn](https://www.sciencedirect.com/science/article/abs/pii/S0959475217303468)!)
 
@@ -75,6 +75,8 @@ A good narrative document for this game would walk through at least one game of 
 
 ## Exercise 3: TypeScript-specific notes
 
+> 🎯 **Success criterion:** a document which outlines how this Hangman game uses some TypeScript features that don't exist in JavaScript.
+
 The basic principles of variable assignment, control flow and functions are the same between TypeScript and JavaScript (and also Python).
 
 TypeScript does introduce some additional things, though:
@@ -86,6 +88,12 @@ TypeScript does introduce some additional things, though:
 | Parameter declaration | <pre>function incrementCounter(n) { <br /> &nbsp;counter += n; <br /> &nbsp;return counter; <br /> }</pre> | <pre>function incrementCounter(n: number): number { <br /> &nbsp;counter += n; <br /> &nbsp;return counter; <br /> }</pre> |
 | Interfaces | N/A | <pre>interface FootballMatch { <br/>&nbsp;homeGoals: number; <br/>&nbsp;awayGoals: number; <br/>&nbsp;teamNames: string[], <br/>&nbsp;isFullTime: boolean }</pre> |
 | Types | N/A | <pre>type FootballPosition = 'striker' | 'midfielder' | 'defender' | 'goalkeeper'</pre> |
+| Type Assertion | N/A | `const substituteBench = ['defender', 'defender', 'midfielder', 'midfielder', 'striker'] as FootballPosition[]` |
+
+Produce a document which explains:
+
+- How do each of these things work?
+- How are they used in the Hangman project?
 
 ## Exercise 4: Check your understanding
 
@@ -97,7 +105,7 @@ Amend the comments on your copy of the code for any important points that come o
 
 ## Exercise 5: Extend the game
 
-**Success criterion:** a game which can be playtested and which satisfies the specified requirements for each extension.
+> 🎯 **Success criterion:** a game which can be playtested and which satisfies the specified requirements for each extension.
 
 ### Extension 1: Rock Paper Scissors Lizard Spock
 
