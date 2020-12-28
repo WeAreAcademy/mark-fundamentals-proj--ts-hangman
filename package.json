@@ -1,0 +1,18 @@
+{
+  "name": "mark-fundamentals-proj--ts-hangman",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10",
+    "ts-node": "^9.1.1"
+  },
+  "devDependencies": {
+    "@types/readline-sync": "^1.4.3",
+    "typescript": "^4.1.3"
+  }
+}
