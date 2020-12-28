@@ -79,11 +79,12 @@ The basic principles of variable assignment, control flow and functions are the 
 
 TypeScript does introduce some additional things, though:
 
-| Item | Idiomatic JavaScript example | Idiomatic TypeScript example |
+| Item | JavaScript example | TypeScript example |
 | --- | --- | --- |
-| Variable declaration | `let livesRemaining = 10` | `let livesRemaining: number = 10` |
-| Function declaration | <pre>function takeAndHandleGuess() { <br /> &nbsp;... <br /> }</pre> | <pre>function takeAndHandleGuess(): void { <br /> &nbsp;... <br />}</pre> |
-| Parameter declaration | <pre>function wordToBoard(word) { <br /> &nbsp;... <br /> }</pre> | <pre>function wordToBoard(word: string): Board { <br /> &nbsp;... <br />}</pre> |
+| Variable declaration | `let counter = 10` | `let counter: number = 10` |
+| Function declaration | <pre>function printCounterValue() { <br /> &nbsp;console.log(counter) <br /> }</pre> | <pre>function printCounterValue(): void { <br /> &nbsp;console.log(counter) <br />}</pre> |
+| Parameter declaration | <pre>function incrementCounter(n) { <br /> &nbsp;counter += n; <br /> &nbsp;return counter; <br /> }</pre> | <pre>function incrementCounter(n: number): number { <br /> &nbsp;counter += n; <br /> &nbsp;return counter; <br /> }</pre> |
+| Interfaces | N/A |
 
 ## Exercise 4: Check your understanding
 
