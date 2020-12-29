@@ -83,12 +83,12 @@ TypeScript does introduce some additional things, though:
 
 | Item | JavaScript example | TypeScript example |
 | --- | --- | --- |
-| Variable declaration | `let counter = 10` | `let counter: number = 10` |
+| Variable declaration | <pre>let counter = 10</pre> | <pre>let counter: number = 10</pre> |
 | Function declaration | <pre>function printCounterValue() { <br /> &nbsp;console.log(counter) <br /> }</pre> | <pre>function printCounterValue(): void { <br /> &nbsp;console.log(counter) <br />}</pre> |
 | Parameter declaration | <pre>function incrementCounter(n) { <br /> &nbsp;counter += n; <br /> &nbsp;return counter; <br /> }</pre> | <pre>function incrementCounter(n: number): number { <br /> &nbsp;counter += n; <br /> &nbsp;return counter; <br /> }</pre> |
 | Interfaces | N/A | <pre>interface FootballMatch { <br/>&nbsp;homeGoals: number; <br/>&nbsp;awayGoals: number; <br/>&nbsp;teamNames: string[], <br/>&nbsp;isFullTime: boolean <br/>}</pre> |
 | Types | N/A | <pre>type FootballPosition = 'striker' &#124; 'midfielder' &#124; 'defender' &#124; 'goalkeeper'</pre> |
-| Type Assertion | N/A | `const substituteBench = ['defender', 'defender', 'midfielder', 'midfielder', 'striker'] as FootballPosition[]` |
+| Type Assertion | N/A | <pre>const substituteBench = ['defender', 'defender', 'midfielder', 'midfielder', 'striker'] as FootballPosition[]</pre> |
 
 Produce a document which explains:
 
