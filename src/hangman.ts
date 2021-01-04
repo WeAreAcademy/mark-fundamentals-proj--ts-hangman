@@ -145,7 +145,16 @@ function handleGuess(guess: string): void {
  * @returns a boolean indicating whether or not the string is a `LowercaseLetter`
  */
 function isALowercaseLetter(str: string): str is LowercaseLetter {
-  return str.length === 1 && !!str.match(/[a-z]/);
+  /** Check whether it's just a single character */
+  const isASingleCharacter = str.length === 1;
+
+  /**
+   * Whether or not the string matches a [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) for the lowercase Roman alphabet.
+   *
+   * The double negation of !! is used to guarantee a boolean type.
+   */
+  const hasALowercaseAlphabetMatch = !!str.match(/[a-z]/);
+  return isASingleCharacter && hasALowercaseAlphabetMatch;
 }
 
 /**
