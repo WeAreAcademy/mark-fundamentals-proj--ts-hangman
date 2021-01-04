@@ -151,7 +151,7 @@ function isALowercaseLetter(str: string): str is LowercaseLetter {
   /**
    * Whether or not the string matches a [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) for the lowercase Roman alphabet.
    *
-   * The double negation of !! is used to guarantee a boolean type.
+   * The double negation of !! is used to guarantee a boolean return type (which TypeScript insists on for type guards).
    */
   const hasALowercaseAlphabetMatch = !!str.match(/[a-z]/);
   return isASingleCharacter && hasALowercaseAlphabetMatch;

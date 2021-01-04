@@ -107,7 +107,7 @@ Amend your notes for any important points that come out of the conversation.
 
 ## Exercise 5: Extend the game
 
-> 🎯 **Success criterion:** a game which can be playtested and which satisfies the specified requirements for each extension.
+> 🎯 **Success criterion:** a game which can be play-tested and which satisfies the specified requirements for each extension.
 
 ### Extension 1: Handle uppercase guesses
 
