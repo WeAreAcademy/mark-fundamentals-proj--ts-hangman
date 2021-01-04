@@ -147,38 +147,6 @@ function isALowercaseLetter(str: string): str is LowercaseLetter {
 }
 
 /**
- * Process a letter guessed by the player
- * @param letter the letter guessed by the player
- */
-function processGuessedLetter(letter: LowercaseLetter): void {
-  if (boardContainsLetter(letter)) {
-    /** Reveal the letter on the board if it's present */
-    console.log("Bullseye!");
-    revealLetter(letter);
-  } else {
-    /** Otherwise, the player loses a life */
-    console.log("It's not there...");
-    livesRemaining -= 1;
-  }
-}
-
-/**
- * Process a word guessed by the player
- * @param word the word guessed by the player
- */
-function processGuessedWord(word: string): void {
-  if (word === hiddenWord) {
-    /** Reveal the whole board if the word is correct */
-    console.log("Bullseye!");
-    revealWholeBoard();
-  } else {
-    /** Otherwise, the player loses a life */
-    console.log("That's not the word...");
-    livesRemaining -= 1;
-  }
-}
-
-/**
  * Convert a `LetterSlot` object into a print-friendly character
  * @param letterSlot the underlying letter slot data
  * @returns a character representing the letter slot, either the letter itself (if the letterSlot is revealed) or an `_` to represent a blank
@@ -229,6 +197,38 @@ function playRound(): void {
   console.log("Your lives remaining:", livesRemaining);
   console.log("Your previous guesses:", guessesMade);
   takeAndHandleGuess();
+}
+
+/**
+ * Process a letter guessed by the player
+ * @param letter the letter guessed by the player
+ */
+function processGuessedLetter(letter: LowercaseLetter): void {
+  if (boardContainsLetter(letter)) {
+    /** Reveal the letter on the board if it's present */
+    console.log("Bullseye!");
+    revealLetter(letter);
+  } else {
+    /** Otherwise, the player loses a life */
+    console.log("It's not there...");
+    livesRemaining -= 1;
+  }
+}
+
+/**
+ * Process a word guessed by the player
+ * @param word the word guessed by the player
+ */
+function processGuessedWord(word: string): void {
+  if (word === hiddenWord) {
+    /** Reveal the whole board if the word is correct */
+    console.log("Bullseye!");
+    revealWholeBoard();
+  } else {
+    /** Otherwise, the player loses a life */
+    console.log("That's not the word...");
+    livesRemaining -= 1;
+  }
 }
 
 /**
