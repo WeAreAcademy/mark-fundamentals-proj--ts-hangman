@@ -137,7 +137,9 @@ function handleGuess(guess: string): void {
 /**
  * A type guard that checks whether or not a given string is of the `LowercaseLetter` type.
  *
- * To learn more about type guards in TypeScript, see these readings on user-defined type guards: [Official TypeScript handbook](https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards) | [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/type-system/typeguard#user-defined-type-guards)
+ * To learn more about type guards in TypeScript, see these readings on user-defined type guards:
+ *  - [Official TypeScript handbook](https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards)
+ *  - [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/type-system/typeguard#user-defined-type-guards)
  *
  * @param str the string to check
  * @returns a boolean indicating whether or not the string is a `LowercaseLetter`
@@ -286,7 +288,15 @@ function takeAndHandleGuess(): void {
  * @returns a `HangmanBoard` representation of the word (with all letters hidden at the start)
  */
 function wordToBoard(word: string): HangmanBoard {
-  const lettersArr = word.split("") as LowercaseLetter[];
+  const wordInLowercase = word.toLowerCase();
+  /**
+   * An array of lowercase letters.
+   *
+   * We typecast using `as LowercaseLetter[]` on the basis that:
+   * 1. `wordInLowercase` should already be all lowercase letters
+   * 2. We are (for now) just assuming that it's a single word that gets passed in
+   */
+  const lettersArr = wordInLowercase.split("") as LowercaseLetter[];
   return lettersArr.map((char) => ({ letter: char, isRevealed: false }));
 }
 
