@@ -257,7 +257,7 @@ function revealLetter(letterToReveal: LowercaseLetter): void {
 }
 
 /**
- * Store all guessed made by the player
+ * Store a guess made by the player
  * @param guess a letter or word guessed by the player
  */
 function storeGuess(guess: string): void {
@@ -289,15 +289,27 @@ function takeAndHandleGuess(): void {
  */
 function wordToBoard(word: string): HangmanBoard {
   const wordInLowercase = word.toLowerCase();
+
   /**
    * An array of lowercase letters.
    *
-   * We typecast using `as LowercaseLetter[]` on the basis that:
-   * 1. `wordInLowercase` should already be all lowercase letters
-   * 2. We are (for now) just assuming that it's a single word that gets passed in
+   * We typecast here because we need each element in the array to be typed as a `LowercaseLetter` in order for `board` to have the right type - our board requires lowercase letters.
+   *
+   * Assumptions being made in the type cast:
+   * 1. `wordInLowercase` is all lowercase (handled above)
+   * 2. We are (for now) just assuming that the string is a single word rather than mutliple words
    */
   const lettersArr = wordInLowercase.split("") as LowercaseLetter[];
-  return lettersArr.map((char) => ({ letter: char, isRevealed: false }));
+
+  /**
+   * The `HangmanBoard` formed from an array of lowercase letters.
+   */
+  const board: HangmanBoard = lettersArr.map((char) => ({
+    letter: char,
+    isRevealed: false,
+  }));
+
+  return board;
 }
 
 export default playGame;
