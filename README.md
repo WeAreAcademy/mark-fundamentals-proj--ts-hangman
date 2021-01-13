@@ -111,11 +111,11 @@ Amend your notes for any important points that come out of the conversation.
 
 ### Extension 1: Handle uppercase guesses
 
-The game probably doesn't behave as a player would expect when they guess a letter in uppercase form.
+Try guessing an uppercase letter, an uppercase word or a word with a mixture of cases in it - the game probably doesn't behave how players would expect. 
 
 Produce some acceptance criteria for a fix, and then try to implement a fix to pass those acceptance criteria.
 
-(Acceptance criteria are really helpful here because there are at least two fundamentally different ways you could handle the user inputting an uppercase letter: require them to try again with a lowercase letter, or process the uppercase letter in a sensible way.)
+(Acceptance criteria are really helpful here because there are at least two fundamentally different ways you could handle the user inputting a guess in uppercase (or in a mixture of upper and lowercase): require them to try again with only lowercase, or process the uppercase in a sensible way.)
 
 ### Extension 2: Hangman animation
 
