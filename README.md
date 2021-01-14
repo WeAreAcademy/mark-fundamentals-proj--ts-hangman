@@ -111,17 +111,15 @@ Amend your notes for any important points that come out of the conversation.
 
 ### Extension 1: Handle uppercase guesses
 
-The game probably doesn't behave as a player would expect when they guess a letter in uppercase form.
+Try guessing an uppercase letter, an uppercase word or a word with a mixture of cases in it - the game probably doesn't behave how players would expect. 
 
 Produce some acceptance criteria for a fix, and then try to implement a fix to pass those acceptance criteria.
 
-(Acceptance criteria are really helpful here because there are at least two fundamentally different ways you could handle the user inputting an uppercase letter: require them to try again with a lowercase letter, or process the uppercase letter in a sensible way.)
+(Acceptance criteria are really helpful here because there are at least two fundamentally different ways you could handle the user inputting a guess in uppercase (or in a mixture of upper and lowercase): require them to try again with only lowercase, or process the uppercase in a sensible way.)
 
 ### Extension 2: Hangman animation
 
-The game currently prints out a slightly boring 'Lives remaining' message.
-
-Can you extend the game so that an [ASCII stick person](https://www.google.com/search?q=ascii+stick+person&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjMy62_nfHtAhVAQhUIHV4qD1QQ_AUoAXoECBAQAw&biw=1536&bih=801) gets slowly assembled, like in the traditional whiteboard version of the game?
+The game currently prints out a slightly boring 'Lives remaining' message. Extend the game to print unicode symbols such as hearts or stars indicating the number of lives remaining. As an example, a singular snowflake (❄) could be logged via `console.log("\u2744")`. 
 
 ## Exercise 6: Commentary and reflection
 
